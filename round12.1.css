@@ -7,6 +7,7 @@ body {
   font-family: "微软雅黑", sans-serif;
   background: white;
   height: 1280px;
+  overflow-x: hidden;
 }
 @media (max-width: 500px) {
   html {
@@ -21,13 +22,18 @@ a:hover,
 a:visited {
   text-decoration: none;
 }
+header {
+  width: calc(100% - 60px) !important;
+  left: 0!important;
+  margin-left: 0!important;
+}
 header,
 footer {
   width: 100%;
   margin-left: -30px;
   height: 100px;
   background: #5fc0cd;
-  padding: 0 30px 0 60px;
+  padding: 0 30px 0 30px;
   position: fixed;
   top: 0;
   left: -30px;
@@ -89,7 +95,7 @@ nav .nav-1 .triangle-down {
   top: 16px;
 }
 nav .nav-1 .nav-1-1 {
-  width: 33%;
+  width: calc((100% - 2px)/3);
   text-align: center;
   float: left;
   height: 40px ;
